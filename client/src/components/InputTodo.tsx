@@ -26,8 +26,6 @@ export const InputTodo = () => {
       <h1 className="text-center mt-5">InputTodo List</h1>
       <form
         className="d-md-flex mt-5 needs-validation"
-        noValidate
-        // eslint-disable-next-line @typescript-eslint/no-misused-promises
         onSubmit={onSubmitForm}
       >
         <input
@@ -40,7 +38,6 @@ export const InputTodo = () => {
           id="validationCustom01"
           required
         />
-        <div className="invalid-feedback">Please provide a valid city.</div>
         <button type="submit" className="btn btn-success btn-sm">
           Add
         </button>

@@ -3,6 +3,8 @@ const cors = require("cors");
 const app = express();
 const pool = require("./db")
 
+require('dotenv').config()
+
 //middleware
 app.use(cors());
 app.use(express.json()); //req body
@@ -68,8 +70,7 @@ app.delete("/todos/:id", async (req, res) => {
     }
 })
 
-const port = 5000;
 
-app.listen(port, () => {
-    console.log(`server running at port ${port}`);
+app.listen(process.env.PORT, () => {
+    console.log(`server running at port ${process.env.PORT}`);
 })

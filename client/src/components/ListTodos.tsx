@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { EditTodo } from "./EditTodo";
 
 interface IListTodos {

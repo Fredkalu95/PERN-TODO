@@ -8,7 +8,7 @@ export const InputTodo = () => {
     e.preventDefault();
     try {
       const body : { description: string } = {description};
-      await fetch("pern-todo-api.vercel.app:5000/todos", {
+      await fetch("https://pern-todo-api.vercel.app/todos", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),

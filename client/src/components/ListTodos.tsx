@@ -11,7 +11,7 @@ export const ListTodos = () => {
 
   const deleteTodo = async (id: number) => {
     try {
-      await fetch(`http://localhost:5000/todos/${id}`, {
+      await fetch(`pern-todo-api.vercel.app:5000/todos/${id}`, {
         method: "DELETE",
       });
 

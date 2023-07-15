@@ -1,4 +1,4 @@
-import React, { FormEvent, Fragment, useState } from "react";
+import { FormEvent, Fragment, useState } from "react";
 
 export const InputTodo = () => {
   const [description, setDescritption] = useState("");
@@ -8,7 +8,7 @@ export const InputTodo = () => {
     e.preventDefault();
     try {
       const body : { description: string } = {description};
-      const response = await fetch("http://localhost:5000/todos", {
+      await fetch("http://localhost:5000/todos", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
